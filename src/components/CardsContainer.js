@@ -100,8 +100,21 @@ const CardsContainer = () => {
 
   return (
     <div>
-      <div>
-        <div>
+      <div
+        style={{
+          width: "100%",
+          height: "100px",
+          background: "red",
+          fontSize: "16px",
+          fontWeight: "600",
+          color: "white",
+        }}
+      >
+        <div
+          style={{
+            paddingTop: "10px",
+          }}
+        >
           Current score: {currentScore}
           <br />
           Best score: {bestScore}

@@ -10,7 +10,7 @@ const Card = (props) => {
     <div
       onClick={() => props.handleClick(props.name)}
       style={{
-        background: "red",
+        boxShadow: "5px 5px 15px",
         margin: "20px",
         height: "100%",
         width: "250px",
