@@ -1,17 +1,25 @@
 import { useState } from "react";
 
 const Card = (props) => {
+  const [key, setKey] = useState(props.key);
   const [name, setName] = useState(props.name);
   const [occupation, setOccupation] = useState(props.occupation);
   const [photoUrl, setPhotoUrl] = useState(props.photoUrl);
 
   return (
-    <div style={{ background: "red", margin: "20px" }}>
-      <div>This is a card</div>
+    <div
+      onClick={() => props.handleClick(props.name)}
+      style={{
+        background: "red",
+        margin: "20px",
+        height: "100%",
+        width: "250px",
+      }}
+    >
       <h1>{name}</h1>
       <br />
       <h2>{occupation}</h2>
-      <img src={photoUrl}></img>
+      <img style={{ width: "80%" }} src={photoUrl}></img>
     </div>
   );
 };
